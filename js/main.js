@@ -6,7 +6,7 @@
  * (Lista email: michele@boolean.careers, fabio@boolean.careers, roberto@boolean.careers)
  * 
  * GIOCO DEI DADI
- * 1) generare un numero random da 1  a 6, sia per il giocatore sia per il computer
+ * 1) generare un numero random da 1 a 6, sia per il giocatore sia per il computer
  * 2) Stabilire il vincitore, in base a chi fa il punteggio più alto
  * 
  */
@@ -24,4 +24,22 @@ for( var i=0; i < emailVip.length; i++) {
         emailFound = true;
         console.log('Sei un Vip');
     }
+}
+
+if ( emailFound == true ) {
+    // Generazione numeri random per il gioco dei dadi
+    console.log('Sei un grande, puoi giocare!');
+    var userDice = Math.ceil(Math.random() * 12);
+    console.log('Hai tirato il tuo dado, hai fatto: ' + userDice);
+    var computerDice = Math.ceil(Math.random() * 12);
+    console.log('Il computer risponde con: ' + computerDice);
+    if ( userDice > computerDice ) {
+        console.log('Complimenti! Hai vinto un buono di 5.000 lire per l\'acquisto della torre Eiffel');
+    } else if ( userDice < computerDice ) {
+        console.log('Ci dispiace tantissimo, ma con questa sconfitta hai perso tutto: casa, fortuna, denaro, moglie, marito, etc.');
+    } else {
+        console.log('Hai pareggiato, sei forte quanto un computer!');
+    }
+} else {
+    console.log('Non vali niente, non puoi giocare. Ciaaaaoooo!');
 }
