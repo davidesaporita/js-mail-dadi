@@ -43,6 +43,7 @@ h6 {
 }
 
 .btn {
+    position: relative;
     padding: 12px 40px;
     background: rgb(6, 145, 6);
     border: 1px solid #fff;
@@ -52,6 +53,28 @@ h6 {
     text-align: center;
     text-transform: uppercase;
     color: white;
+}
+
+.btn--red {
+    background: red;
+    z-index: 1;
+}
+
+.btn--decadent {
+    animation: decadent 10s ease-in;
+    z-index: 0;
+}
+
+@keyframes decadent {
+    0% {
+       transform: translateY(0);
+    }   
+    70% {
+        transform: translateY(2048px);
+     }
+    100% {
+       transform: translateY(2500px);
+    }
 }
 
 .overlay {
@@ -72,6 +95,7 @@ h6 {
     height: 100vh;
     background-image: url('../img/dice_bg.jpg');
     background-size: cover;
+    overflow: hidden;
 }
 
 .check {

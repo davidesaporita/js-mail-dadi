@@ -11,6 +11,7 @@
  * 
  */
 
+ 
 
 // All'azione click sul bottone "Clicca qui" raccogliamo in una variabile l'email inserita
 var emailButton = document.getElementById('emailButton');
@@ -56,5 +57,14 @@ emailButton.addEventListener('click',
             console.log('Non vali niente, non puoi giocare. Ciaaaaoooo!');
         }
 
+    }
+);
+
+
+var dontclickButton = document.getElementById('dontclick');
+dontclickButton.addEventListener('click',
+    function () {
+        document.getElementById('emailButton').classList.add("btn--decadent");
+        document.getElementById('title').innerHTML = 'Ecco fatto,<br>ora non puoi giuocare più';
     }
 );
