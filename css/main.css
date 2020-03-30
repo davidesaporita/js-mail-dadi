@@ -77,6 +77,32 @@ h6 {
     }
 }
 
+.rotate {
+    animation: rotateDice 0.7s linear 0.1s;
+}
+
+.rotate--infinite {
+    animation: rotateDice 0.3s linear 0.1s infinite;
+}
+
+@keyframes rotateDice {
+    0% {
+       transform: rotate(0deg);
+    }   
+    25% {
+       transform: rotate(360deg);
+    }
+    50% {
+        transform: rotate(720deg);
+    }
+    75% {
+        transform: rotate(1080deg);
+    }
+    100% {
+        transform: rotate(1440deg);
+    }
+}
+
 .overlay {
     position: absolute;
     width: 100%;
@@ -114,7 +140,8 @@ h6 {
     padding-right: 10%;
 }
 
-.input > * {
+.input > *,
+button {
     display: block;
     margin-bottom: 10px;
 }
@@ -142,9 +169,30 @@ h6 {
 }
 
 
-
 .game > div {
     flex-basis: 50%;
     padding-left: 10%;
     padding-right: 10%;
+}
+
+#playAgain {
+    position: relative;
+    z-index: 2;
+}
+
+#explosion {
+    position: absolute;
+    bottom: 0;
+    transform: translate(-25px,5vh);
+}
+
+.showWithDelay {
+    opacity: 1;
+    transition: opacity;
+    transition-delay: 3.3s;
+}
+
+.destroyShow {
+    opacity: 0;
+    transition: opacity;
 }
